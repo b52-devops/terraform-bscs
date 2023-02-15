@@ -10,4 +10,11 @@ output "state-name" {
     value = "Name of the state is ${var.State}"
 }
 
+variable "Project" {}
+
+output "project" {
+    value = "Name of the project is ${var.Project}"
+}
+
+
 # Always ensure to declare an empty variable before you use it 
