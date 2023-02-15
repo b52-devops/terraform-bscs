@@ -26,6 +26,14 @@ resource "aws_security_group" "allow_ssh" {
         cidr_blocks      = ["0.0.0.0/0"]             # [] represents list
     }
 
+    ingress {
+        description      = "HTTP from public"
+        from_port        = 80
+        to_port          = 80
+        protocol         = "tcp"
+        cidr_blocks      = ["0.0.0.0/0"]             # [] represents list
+    }
+
     egress {
         from_port        = 0
         to_port          = 0
