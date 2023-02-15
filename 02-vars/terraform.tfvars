@@ -1,0 +1,2 @@
+City = "Banglore"
+State = "Karnataka"
