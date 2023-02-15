@@ -35,15 +35,15 @@ output "ex-list-op" {
 }
 
 
-# # This is how we declare a map variable 
-# variable "ex-map" {
-# default = {
-#     Duration = 105, 
-#     Trainer = "Verma", 
-#     Cloud = "AWS"
-#     }
-# }
+# This is how we declare a map variable 
+variable "ex-map" {
+default = {
+    Duration = 105, 
+    Trainer = "Verma", 
+    Cloud = "AWS"
+    }
+}
 
-# output "ex-map-op" {
-#     value = "Welcome to DevOps with ${var.ex-map["Cloud"]} Training and the training duration is ${var.ex-map["Duration"]} , training name is ${var.ex-map["Trainer"]}"
-# }
+output "ex-map-op" {
+    value = "Welcome to DevOps with ${var.ex-map["Cloud"]} Training and the training duration is ${var.ex-map["Duration"]} , training name is ${var.ex-map["Trainer"]}"
+}
