@@ -1,6 +1,6 @@
 #Creates ec2 instance
 resource "aws_instance" "my-ec2" {
-    ami                     = "ami-00e87074e52e6c9f9"
+    ami                     = "ami-086655dc1dd51601a"
     instance_type           = "t2.micro"
     vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
 
