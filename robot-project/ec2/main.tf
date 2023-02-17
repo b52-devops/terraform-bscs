@@ -2,7 +2,7 @@
 
 # Request a spot instance at $0.03
 resource "aws_spot_instance_request" "my_spot_server" {
-    ami                     = "ami-086655dc1dd51601a"
+    ami                     = "data.aws_ami.lab-image.image_id"
     instance_type           = "t3.micro"
     vpc_security_group_ids  = [aws_security_group.allow_all.id]
     wait_for_fulfillment    = true          # Terraforn job will only be completed if the request is fulfilled. If not, it waits or 10 minutes and then timeout
