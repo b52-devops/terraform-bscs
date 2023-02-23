@@ -4,7 +4,14 @@ resource "aws_security_group" "allow_all" {
     name        = "allow_${var.COMPONENT}"
     description = "Allow SSH inbound traffic"
 
-    ingress {
+ingress {
+    description      = "HTTP from INTERNET"
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    }
+ingress {
         description      = "SSH from public"
         from_port        = 0
         to_port          = 0
@@ -23,3 +30,5 @@ resource "aws_security_group" "allow_all" {
         Name = "allow-${var.COMPONENT}"
     }
 }
+
+
