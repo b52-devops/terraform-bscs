@@ -12,13 +12,13 @@ resource "aws_security_group" "allow_all" {
         cidr_blocks      = ["0.0.0.0/0"]
         }
 
-    ingress {
-            description      = "SSH from public - dj"
-            from_port        = 0
-            to_port          = 0
-            protocol         = "tcp"
-            cidr_blocks      = ["0.0.0.0/0"]             # [] represents list
-        }
+    # ingress {
+    #         description      = "SSH from public - dj"
+    #         from_port        = 0
+    #         to_port          = 0
+    #         protocol         = "tcp"
+    #         cidr_blocks      = ["0.0.0.0/0"]             # [] represents list
+    #     }
 
     egress {
         from_port        = 0
