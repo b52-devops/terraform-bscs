@@ -29,7 +29,7 @@
 resource "aws_instance" "my-ec2" {
     ami                     = data.aws_ami.lab-image.image_id
     instance_type           = "t2.micro"
-    vpc_security_group_ids  = [aws_security_group.allow_all.id]
+    vpc_security_group_ids  = [aws_security_group.allows_all.id]
 
     tags = {
         Name = var.COMPONENT
