@@ -1,8 +1,9 @@
 module "component" {
-    for_each = var.COMPONENTS
+    for_each    = var.COMPONENTS
     source      = "./ec2"
-    COMPONENT = each.key
+    COMPONENT   = each.key
     APP_VERSION = each.value.APP_VERSION
+    ENV         = dev
 }
 
 
