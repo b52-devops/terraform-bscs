@@ -19,9 +19,10 @@
 #         host     = self.private_ip         # self. will only work if it's inside the resource ; If not, we need to use aws_instance.my-ec2.public_ip
 #         }
 
-#         inline = [
-#             "ansible-pull -U https://github.com/jaindeepak2008/ansible-b52.git -e COMPONENT=frontend  -e APP_VERSION=${var.APP_VERSION} -e ENV=dev robot-pull.yml"
-#         ]
+#        inline = [
+#                "ansible-pull -U https://github.com/b52-devops/ansible-repo-b52.git -e COMPONENT=frontend -e ENV=dev -e APP_VERSION=${var.APP_VERSION} -e ENV=dev robot-pull.yml"
+#        ]
+
 #     }
 # }
 
@@ -49,3 +50,4 @@ resource "aws_instance" "my-ec2" {
 }
 
 # https://github.com/b52-devops/ansible-repo-b52.git
+
