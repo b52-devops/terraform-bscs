@@ -44,7 +44,7 @@ resource "aws_instance" "my-ec2" {
         }
 
         inline = [
-                "ansible-pull -U https://github.com/b52-devops/ansible-repo-b52.git -e COMPONENT=frontend -e ENV=dev -e APP_VERSION=${var.APP_VERSION} -e ENV=dev robot-pull.yml"
+                "ansible-pull -U https://github.com/b52-devops/ansible-repo-b52.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e APP_VERSION=${var.APP_VERSION} -e ENV=dev robot-pull.yml"
         ]
     }
 }
