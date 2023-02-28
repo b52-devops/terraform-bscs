@@ -1,4 +1,4 @@
-module "frontend" {
+module "mongodb" {
     source      = "./ec2"
     COMPONENT   = "mongodb"
     APP_VERSION = "null"
